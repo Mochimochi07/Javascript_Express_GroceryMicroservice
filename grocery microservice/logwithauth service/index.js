@@ -15,7 +15,7 @@ app.post('/login', (req, res) => {
 
 
   if (username === 'user' && password === 'password') {
-    // If the login is successful, create a JSON web token
+    
     const token = jwt.sign({ username }, JWT_SECRET, { expiresIn: '1h' });
     res.json({ token });
   } else {
